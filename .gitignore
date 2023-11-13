@@ -1,1 +1,7 @@
+# files/folder that should be ignored in commits
+
+# cache folder created while running python files in vs code
 App/__pycache__/
+
+# checkpoints folder created by jupyter
+Models/.ipynb_checkpoints/
