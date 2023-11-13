@@ -1,0 +1,217 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link
+    href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css"
+    rel="stylesheet"
+    integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC"
+    crossorigin="anonymous">
+
+  <title>ICC World Cup Predictor</title>
+</head>
+<body style="background-color: #f1f1f1;">
+  <div class="container">
+    <div class="container rounded-top" style="background-color: #009270;">
+      <h1 class=" text-center text-white p-3 mt-2 mb-0">ICC Cricket World Cup
+        2023 ML
+        Challange</h1>
+    </div>
+    <div class="container rounded-bottom text-white"
+      style="background-color: #4a4a4a;">
+      <h3 class="text-white text-center p-3">
+        Team DataForce
+      </h3>
+    </div>
+    <div class="container d-flex justify-content-center m-3 p-3">
+      <div class="container team1">
+        <div class="dropdown text-center">
+          <h5 class="text-center">Team 1</h5>
+          <select id="team1Select"
+            class="form-select dropdown-toggle w-75 text-center"
+            aria-label="Default select example">
+            {%for teamName in teamsList%}
+            <li></li>
+            <option value='{{teamName}}'>{{teamName}}</option>
+            {%endfor%}
+            <option value="0" selected>Select Team</option>
+          </select>
+        </div>
+      </div>
+      <div class="container team2">
+        <div class="dropdown text-center">
+          <h5 class="text-center">Team 2</h5>
+          <select id="team2Select" class="form-select dropdown-toggle w-75"
+            aria-label="Default select example">
+            {%for teamName in teamsList%}
+            <li></li>
+            <option value='{{teamName}}'>{{teamName}}</option>
+            {%endfor%}
+            <option value="0" selected>Select Team</option>
+          </select>
+        </div>
+      </div>
+      <div class="container venue">
+        <div class="dropdown text-center">
+          <h5 class="text-center">Venue</h5>
+          <select id="venueSelect" class="form-select dropdown-toggle"
+            aria-label="Default select example">
+            {%for venue in venueList%}
+            <li></li>
+            <option value='{{venue}}'>{{venue}}</option>
+            {%endfor%}
+            <option value="0" selected>Select venue</option>
+          </select>
+        </div>
+      </div>
+    </div>
+
+    <div class="container text-center">
+      <button class="btn btn-success text-center" style="width: 150px;"
+        onclick="sendRequest()"> Predict
+      </button>
+      <p>Click to predict team compositions and winner</p>
+      <div class="spinner-border text-success text-center container"
+        role="status" id="loadingView" style="display:none;">
+      </div>
+
+    </div>
+    <p id="errorView" style="display: none;"
+      class="container text-center text-danger">Team 1 and Team 2 should be
+      different!!</p>
+    <div class="container text-center" id="resultView" style="display: none;">
+      <div class="container text-center  w-25 bg-light rounded p-1">
+        <h4>Winner : <span id="winnerTeam">
+            India
+          </span></h4>
+          <p><span id="winnerTeamSub"></span></spanN> wins with <span id="winnerProbability"></span> probability</p>
+      </div>
+      <div class="container d-flex justify-content-center my-2">
+
+        <div class="container mx-3">
+          <h4 class="text-center">Team 1 players</h4>
+          <table class="table">
+            <thead>
+              <tr>
+                <th scope="col">Player Name</th>
+                <th scope="col">Role</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr class="table-success">
+                <td id="team11name">Mark</td>
+                <td id="team11role">Otto</td>
+              </tr>
+              <tr class="table-primary">
+                <td id="team12name">Jacob</td>
+                <td id="team12role">Thornton</td>
+              </tr>
+              <tr class="table-secondary">
+                <td  id="team13name">Jacob</td>
+                <td id="team13role">Thornton</td>
+              </tr>
+              <tr class="table-danger">
+                <td id="team14name">Jacob</td>
+                <td id="team14role">Thornton</td>
+              </tr>
+              <tr class="table-warning">
+                <td id="team15name">Jacob</td>
+                <td id="team15role">Thornton</td>
+              </tr>
+              <tr class="table-info">
+                <td id="team16name">Jacob</td>
+                <td id="team16role">Thornton</td>
+              </tr>
+              <tr class="table-light">
+                <td id="team17name">Jacob</td>
+                <td id="team17role">Thornton</td>
+              </tr>
+              <tr class="table-dark">
+                <td id="team18name">Jacob</td>
+                <td id="team18role">Thornton</td>
+              </tr>
+              <tr class="table-secondary">
+                <td id="team19name">Jacob</td>
+                <td id="team19role">Thornton</td>
+              </tr>
+              <tr class="table-primary">
+                <td id="team110name">Jacob</td>
+                <td id="team110role">Thornton</td>
+              </tr>
+              <tr class="table-light">
+                <td id="team111name">Jacob</td>
+                <td id="team111role">Thornton</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+        <div class="container mx-3">
+          <h4 class="text-center">Team 2 players</h4>
+
+          <table class="table">
+            <thead>
+              <tr>
+                <th scope="col">Player Name</th>
+                <th scope="col">Role</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr class="table-success">
+                <td id="team21name">Mark</td>
+                <td id="team21role">Otto</td>
+              </tr>
+              <tr class="table-primary">
+                <td id="team22name">Jacob</td>
+                <td id="team22role">Thornton</td>
+              </tr>
+              <tr class="table-secondary">
+                <td id="team23name">Jacob</td>
+                <td id="team23role">Thornton</td>
+              </tr>
+              <tr class="table-danger">
+                <td id="team24name">Jacob</td>
+                <td id="team24role">Thornton</td>
+              </tr>
+              <tr class="table-warning">
+                <td id="team25name">Jacob</td>
+                <td id="team25role">Thornton</td>
+              </tr>
+              <tr class="table-info">
+                <td id="team26name">Jacob</td>
+                <td id="team26role">Thornton</td>
+              </tr>
+              <tr class="table-light">
+                <td id="team27name">Jacob</td>
+                <td id="team27role">Thornton</td>
+              </tr>
+              <tr class="table-dark">
+                <td id="team28name">Jacob</td>
+                <td id="team28role">Thornton</td>
+              </tr>
+              <tr class="table-secondary">
+                <td id="team29name">Jacob</td>
+                <td id="team29role">Thornton</td>
+              </tr>
+              <tr class="table-primary">
+                <td id="team210name">Jacob</td>
+                <td id="team210role">Thornton</td>
+              </tr>
+              <tr class="table-light">
+                <td id="team211name">Jacob</td>
+                <td id="team211role">Thornton</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+    </div>
+  </div>
+  <script
+    src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
+    crossorigin="anonymous"></script>
+  <script src="{{url_for('static', filename='client.js')}}"></script>
+
+</body>
+</html>

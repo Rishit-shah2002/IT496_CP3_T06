@@ -1,0 +1,101 @@
+Team_Name,Venue,Batsmen,All_rounders,Bowlers
+India,"Narendra Modi Stadium, Ahmedabad",5,3,3
+India,"Rajiv Gandhi International Stadium, Hyderabad",5,3,3
+India,"Himachal Pradesh Cricket Association Stadium, Dharamsala",5,2,4
+India,"Arun Jaitley Stadium, Delhi",5,2,4
+India,"MA Chidambaram Stadium, Chennai",5,3,3
+India,"Bharat Ratna Shri Atal Bihari Vajpayee Ekana Cricket Stadium, Lucknow",5,2,4
+India,"Maharashtra Cricket Association Stadium, Pune",5,3,3
+India,"M Chinnaswamy Stadium, Bengaluru",5,3,3
+India,"Wankhede Stadium, Mumbai",6,1,4
+India,"Eden Gardens, Kolkata",5,3,3
+Australia,"Narendra Modi Stadium, Ahmedabad",6,1,4
+Australia,"Rajiv Gandhi International Stadium, Hyderabad",5,2,4
+Australia,"Himachal Pradesh Cricket Association Stadium, Dharamsala",5,3,3
+Australia,"Arun Jaitley Stadium, Delhi",5,3,3
+Australia,"MA Chidambaram Stadium, Chennai",6,1,4
+Australia,"Bharat Ratna Shri Atal Bihari Vajpayee Ekana Cricket Stadium, Lucknow",5,3,3
+Australia,"Maharashtra Cricket Association Stadium, Pune",5,3,3
+Australia,"M Chinnaswamy Stadium, Bengaluru",6,1,4
+Australia,"Wankhede Stadium, Mumbai",5,2,4
+Australia,"Eden Gardens, Kolkata",6,1,4
+Sri Lanka,"Narendra Modi Stadium, Ahmedabad",5,2,4
+Sri Lanka,"Rajiv Gandhi International Stadium, Hyderabad",5,2,4
+Sri Lanka,"Himachal Pradesh Cricket Association Stadium, Dharamsala",5,2,4
+Sri Lanka,"Arun Jaitley Stadium, Delhi",5,3,3
+Sri Lanka,"MA Chidambaram Stadium, Chennai",6,1,4
+Sri Lanka,"Bharat Ratna Shri Atal Bihari Vajpayee Ekana Cricket Stadium, Lucknow",6,1,4
+Sri Lanka,"Maharashtra Cricket Association Stadium, Pune",5,3,3
+Sri Lanka,"M Chinnaswamy Stadium, Bengaluru",5,2,4
+Sri Lanka,"Wankhede Stadium, Mumbai",5,2,4
+Sri Lanka,"Eden Gardens, Kolkata",5,2,4
+South Africa,"Narendra Modi Stadium, Ahmedabad",5,2,4
+South Africa,"Rajiv Gandhi International Stadium, Hyderabad",6,1,4
+South Africa,"Himachal Pradesh Cricket Association Stadium, Dharamsala",5,3,3
+South Africa,"Arun Jaitley Stadium, Delhi",5,3,3
+South Africa,"MA Chidambaram Stadium, Chennai",5,2,4
+South Africa,"Bharat Ratna Shri Atal Bihari Vajpayee Ekana Cricket Stadium, Lucknow",5,3,3
+South Africa,"Maharashtra Cricket Association Stadium, Pune",5,3,3
+South Africa,"M Chinnaswamy Stadium, Bengaluru",5,3,3
+South Africa,"Wankhede Stadium, Mumbai",5,3,3
+South Africa,"Eden Gardens, Kolkata",5,3,3
+New Zealand,"Narendra Modi Stadium, Ahmedabad",5,2,4
+New Zealand,"Rajiv Gandhi International Stadium, Hyderabad",5,3,3
+New Zealand,"Himachal Pradesh Cricket Association Stadium, Dharamsala",5,3,3
+New Zealand,"Arun Jaitley Stadium, Delhi",5,2,4
+New Zealand,"MA Chidambaram Stadium, Chennai",5,3,3
+New Zealand,"Bharat Ratna Shri Atal Bihari Vajpayee Ekana Cricket Stadium, Lucknow",5,3,3
+New Zealand,"Maharashtra Cricket Association Stadium, Pune",5,2,4
+New Zealand,"M Chinnaswamy Stadium, Bengaluru",5,3,3
+New Zealand,"Wankhede Stadium, Mumbai",5,3,3
+New Zealand,"Eden Gardens, Kolkata",6,1,4
+Netherlands,"Narendra Modi Stadium, Ahmedabad",5,2,4
+Netherlands,"Rajiv Gandhi International Stadium, Hyderabad",5,3,3
+Netherlands,"Himachal Pradesh Cricket Association Stadium, Dharamsala",5,2,4
+Netherlands,"Arun Jaitley Stadium, Delhi",5,2,4
+Netherlands,"MA Chidambaram Stadium, Chennai",5,2,4
+Netherlands,"Bharat Ratna Shri Atal Bihari Vajpayee Ekana Cricket Stadium, Lucknow",5,2,4
+Netherlands,"Maharashtra Cricket Association Stadium, Pune",5,3,3
+Netherlands,"M Chinnaswamy Stadium, Bengaluru",6,1,4
+Netherlands,"Wankhede Stadium, Mumbai",6,1,4
+Netherlands,"Eden Gardens, Kolkata",5,3,3
+England,"Narendra Modi Stadium, Ahmedabad",5,2,4
+England,"Rajiv Gandhi International Stadium, Hyderabad",5,3,3
+England,"Himachal Pradesh Cricket Association Stadium, Dharamsala",5,2,4
+England,"Arun Jaitley Stadium, Delhi",5,2,4
+England,"MA Chidambaram Stadium, Chennai",5,3,3
+England,"Bharat Ratna Shri Atal Bihari Vajpayee Ekana Cricket Stadium, Lucknow",5,3,3
+England,"Maharashtra Cricket Association Stadium, Pune",5,3,3
+England,"M Chinnaswamy Stadium, Bengaluru",5,3,3
+England,"Wankhede Stadium, Mumbai",5,3,3
+England,"Eden Gardens, Kolkata",5,2,4
+Bangladesh,"Narendra Modi Stadium, Ahmedabad",5,2,4
+Bangladesh,"Rajiv Gandhi International Stadium, Hyderabad",5,3,3
+Bangladesh,"Himachal Pradesh Cricket Association Stadium, Dharamsala",5,2,4
+Bangladesh,"Arun Jaitley Stadium, Delhi",5,2,4
+Bangladesh,"MA Chidambaram Stadium, Chennai",5,2,4
+Bangladesh,"Bharat Ratna Shri Atal Bihari Vajpayee Ekana Cricket Stadium, Lucknow",5,2,4
+Bangladesh,"Maharashtra Cricket Association Stadium, Pune",5,2,4
+Bangladesh,"M Chinnaswamy Stadium, Bengaluru",5,2,4
+Bangladesh,"Wankhede Stadium, Mumbai",5,2,4
+Bangladesh,"Eden Gardens, Kolkata",5,2,4
+Pakistan,"Narendra Modi Stadium, Ahmedabad",6,1,4
+Pakistan,"Rajiv Gandhi International Stadium, Hyderabad",6,1,4
+Pakistan,"Himachal Pradesh Cricket Association Stadium, Dharamsala",5,3,3
+Pakistan,"Arun Jaitley Stadium, Delhi",5,3,3
+Pakistan,"MA Chidambaram Stadium, Chennai",5,2,4
+Pakistan,"Bharat Ratna Shri Atal Bihari Vajpayee Ekana Cricket Stadium, Lucknow",5,2,4
+Pakistan,"Maharashtra Cricket Association Stadium, Pune",5,3,3
+Pakistan,"M Chinnaswamy Stadium, Bengaluru",5,3,3
+Pakistan,"Wankhede Stadium, Mumbai",5,2,4
+Pakistan,"Eden Gardens, Kolkata",5,3,3
+Afghanistan,"Narendra Modi Stadium, Ahmedabad",5,2,4
+Afghanistan,"Rajiv Gandhi International Stadium, Hyderabad",5,3,3
+Afghanistan,"Himachal Pradesh Cricket Association Stadium, Dharamsala",5,2,4
+Afghanistan,"Arun Jaitley Stadium, Delhi",5,3,3
+Afghanistan,"MA Chidambaram Stadium, Chennai",5,2,4
+Afghanistan,"Bharat Ratna Shri Atal Bihari Vajpayee Ekana Cricket Stadium, Lucknow",6,1,4
+Afghanistan,"Maharashtra Cricket Association Stadium, Pune",5,2,4
+Afghanistan,"M Chinnaswamy Stadium, Bengaluru",6,1,4
+Afghanistan,"Wankhede Stadium, Mumbai",5,2,4
+Afghanistan,"Eden Gardens, Kolkata",6,1,4

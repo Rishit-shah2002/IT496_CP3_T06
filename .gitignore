@@ -2,6 +2,10 @@
 
 # cache folder created while running python files in vs code
 App/__pycache__/
+Models/__pycache__/
 
 # checkpoints folder created by jupyter
 Models/.ipynb_checkpoints/
+
+# temp folders created by vscode
+.vscode/

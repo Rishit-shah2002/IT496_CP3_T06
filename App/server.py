@@ -2,38 +2,42 @@
 # This is the main file that is used to run the application
 
 # importing libraries
-import uvicorn
-from fastapi import FastAPI
-from fastapi.responses import HTMLResponse
-import numpy as np
-import pickle  
-import pandas as pd
+from flask import Flask,render_template, request, jsonify
+import json
+from predictor import getPrediction
 
+# Initialize app using Flask
+app = Flask(__name__)
 
-# Initialize app using FastAPI
-app = FastAPI()
+jsonDataFile = open('../Dataset/ICC23Data.json')
+jsonData = json.load(jsonDataFile)
 
 # IP Address and Port Number to run the app
 IpAddr = '127.0.0.1'
 Port = 8000
 
-# function that returns the content
-# of given html file, pass the relative path
-def getHtmlFileContents(path):
-    # read the file contents and return
-    with open(path) as htmlFile:
-        fileContents = htmlFile.read()
-    return fileContents
 
-#default route
-@app.get('/')
+# default route
+@app.route('/')
 def index():
-    return HTMLResponse(content=getHtmlFileContents('./Frontend/index.html'), media_type='text/html')
+    teamsList = jsonData['TeamsList']
+    venueList = jsonData['VenueList']
+    return render_template("index.html",teamsList = teamsList, venueList=venueList)
 
-# Run the API with Uvicorn
+# getting the prediction
+@app.route('/predict',methods=['Post'])
+def predict():
+    inputData = request.json
+    team1 = inputData['team1']
+    team2 = inputData['team2']
+    venue = inputData['venue']
+    print(team1,team2,venue)
+    result = getPrediction(team1, team2, venue)
+    return jsonify(result.__dict__)
+
+# Run the API
 if __name__ == '__main__':
-   uvicorn.run(app, host=IpAddr, port=Port)
-
+   app.run(host=IpAddr, port=Port,debug=True)
 
 # To run the server, enter the following command in terminal  
-# python -m uvicorn server:app --reload
+# python server.py
