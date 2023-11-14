@@ -11,8 +11,8 @@
 ## <p align='center'>Project Overview</p>
 In this project we have worked on the ICC Cricket World Cup 2023 prediction, which involves building and deploying machine learning models to make informative predictions related to the tournament. As a part of it, we have did the following tasks<br/>
 **Task 1**:
-* decid the task
-* decide the taks
+* Predicting the player with the highest number of wickets taken in the tournament
+* Predicting the batsman who will score most runs in the tournament.
 
 **Task 2**:
 *  Predicting the Finalist Teams and Players
@@ -86,6 +86,16 @@ Source: EPSN cricketing website<br/>
 
 
 ## <p align='center'>Tasks and Implementation</p>
+[CP3Tasks.ipynb](https://github.com/Gangaraj-eng/IT496_CP3_T06/blob/main/Models/CP3_Tasks.ipynb) is the main python notebook containing the code for all the tasks<br/>
+
+**Task 1**: 
+There are two subtasks in this<br/>
+* Predicting the player with the highest number of wickets taken in the tournament
+* Predicting the batsman who will score most runs in the tournament.<br/>
+	ICC_Player_Stat.csv contains the player related information over the past few years. This data is used in this task. We have used the following approach for both the above tasks:<br/>
+ **Approach**: There are total 150 players data from 10 teams of ICC 2023. Our approach is to divide the dataset into 15 parts, and for each part, train the model using other 14 parts and predict the outputs for this single part. This way we predict the outputs for all the 15 parts and consider that data by taking maximum value of wickets or runs for prediction.For 1a, wickets taken is the target variable and for 1b, runs will be the target variable.<br/>
+**Model used**: XGBoost Regressor<br/>
+As it is a regression problem, we have tried a few different regression models and XGBoost Regressor is giving best performance with the least mean squared error.<br/>
 
 **Match Winner Prediction model**: 
 Given two teams and venue, the model will predict which team will probably win the match. For this task, team wise statistics like team rank, team number of matches, team avg score over the past matches are extracted from multiple csv data files that we have collected. The final data that is used for training the model have the following columns - Season, Team1, Team2, Winner, Venue, Team1 Avg score, Team 1 Avg wickets, Team 1 Avg catches, Team 1 Avg fours, Team 1 Avg sixes, Team 1 ODI Rank, Team 2 Avg score, Team 2 Avg wickets,Team 2 Avg catches, Team 2 Avg fours, Team 2 Avg sixes, Team 2 ODI Rank.<br/>
@@ -132,6 +142,9 @@ Using the Neural Network model built and the two finalist teams from the previou
 
 
 ## <p align='center'>Results and Conclusion</p>
+**Task 1**:<br/>
+a. The model predicted **Shakib Al Hasan** from Bangladesh to be the highest wicket taker in the tournament.<br/>
+b. The model predcited **Virat Kohli** from India to have the highest runs in the tournament.<br/><br/>
 **Task 2**: The two semi-final schedules were given as input to the model.
 <br/>
 ![image](https://github.com/Gangaraj-eng/IDM_MLAPI_LabTask_27OCT/assets/77287821/b854419d-7618-4002-8ed6-0624244826ab)<br/>
@@ -149,13 +162,13 @@ The following are the list of 11 players from both the finalist teams.
 The above two teams India and South Africa were given as inputs to the model.<br/>
 ![image](https://github.com/Gangaraj-eng/IDM_MLAPI_LabTask_27OCT/assets/77287821/2b1af08a-95cd-42ec-8674-e119e1065565)<br/>
 
-**Result**: According to our model, India will win the ICC World Cup 2023 Tournament with a probabilty of 80%!!<br/>
+**Result**: According to our model, India will win the ICC World Cup 2023 Tournament with a probabilty of 82%!!<br/>
 
-**Contributions**:
+**Team Contributions**:
 | Name | ID | Contribution|
 | --- | --- | ---|
-| Saineni Rohit Rao | 202001003 | Attribute summary: 18-34 <br/> Data Preprocessing <br/> Documentation | 
-| Rohan Reddy Patlolla | 202001076 | Attribute summary: 52-68 <br/> Exploratory data analysis <br/> Train test splitting and model defining |
-| Nipun Shah | 202001096 | Attribute summary: 35-51 <br/> Data Preprocessing <br/> Documentation |
-| Gangaraju Bopparam | 202001107 | Attribute summary: 1-17 <br/> Training, Hyperparameter tuning <br/> and Evaluation |
-| Rishit Shah | 202001411 | Attribute summary: 68-87 <br/> Exploratory Data Analysis <br/> Documentation |
+| Saineni Rohit Rao | 202001003 |  Dataset Collection,Data processing,Task 1a, Task 3,Frontend  | 
+| Rohan Reddy Patlolla | 202001076 |   Documentation,Backend, Task 2, Data processing, Task 3|
+| Nipun Shah | 202001096 |  Dataset collection, Processing, Task 1a, Frontend |
+| Gangaraju Bopparam | 202001107 |  Model Building,Task 1b, Task 2, Backend, Documentation |
+| Rishit Shah | 202001411 |  Documentation |
